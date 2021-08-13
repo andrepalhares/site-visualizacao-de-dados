@@ -7,6 +7,10 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Title from './Title';
+import Plot from "react-plotly.js";
+import { valores } from "./data.js";
+import { IconButton, Tooltip } from '@material-ui/core';
+import HelpIcon from '@material-ui/icons/Help';
 
 // Generate Order Data
 function createData(id, date, name, shipTo, paymentMethod, amount) {
@@ -35,34 +39,34 @@ export default function Orders() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Title>Recent Orders</Title>
-      <Table size="small">
-        <TableHead>
-          <TableRow>
-            <TableCell>Date</TableCell>
-            <TableCell>Name</TableCell>
-            <TableCell>Ship To</TableCell>
-            <TableCell>Payment Method</TableCell>
-            <TableCell align="right">Sale Amount</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.id}>
-              <TableCell>{row.date}</TableCell>
-              <TableCell>{row.name}</TableCell>
-              <TableCell>{row.shipTo}</TableCell>
-              <TableCell>{row.paymentMethod}</TableCell>
-              <TableCell align="right">{row.amount}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-      <div className={classes.seeMore}>
-        <Link color="primary" href="#" onClick={preventDefault}>
-          See more orders
-        </Link>
-      </div>
+      <Title>
+        Completed years of education in the adult (15+) population
+        <Tooltip title="Use o scroll para dar zoom-in e zoom-out no mapa" placement="bottom">
+          <IconButton>
+            <HelpIcon />
+          </IconButton>
+        </Tooltip>
+      </Title>
+      <Plot
+        data={[
+          {
+            type: "choropleth",
+            locationmode: "country names",
+            locations: valores
+              .filter((v) => v.year === 2010)
+              .map((a) => a.country),
+            z: valores.filter((v) => v.year === 2010).map((a) => a.yrseduc),
+            autocolorscale: true
+          }
+        ]}
+        layout={{
+          geo: {
+            projection: {
+              type: "robinson"
+            }
+          }
+        }}
+      />
     </React.Fragment>
   );
 }

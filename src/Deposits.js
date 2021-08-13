@@ -10,6 +10,7 @@ function preventDefault(event) {
 
 const useStyles = makeStyles({
   depositContext: {
+    fontSize: '12px',
     flex: 1,
   },
 });
@@ -18,18 +19,17 @@ export default function Deposits() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Title>Recent Deposits</Title>
-      <Typography component="p" variant="h4">
-        $3,024.00
-      </Typography>
+      <Title>Os dados</Title>
       <Typography color="textSecondary" className={classes.depositContext}>
-        on 15 March, 2019
+        Os dados utilizados neste trabalho estão presentes no dataset Country Socioeconomic Status Scores: 1880-2010, compilado por Shawn Dorius e disponibilizado no site <a href="https://www.kaggle.com/sdorius/globses">Kaggle</a>. Nessa base de dados iniciais, diversos atributos foram encontrados e separados por países. São eles:
+        <ul>
+          <li>Ano em que a coleta de dados foi realizada</li>
+          <li>SES: Valor do status socioeconômico dos países (um valor numérico que varia de 1 a 99)</li>
+          <li>O produto interno per capita</li>
+          <li>Quantidade média de anos de educação completos de pessoas com mais de 15 anos</li>
+          <li>Total da população em %</li>
+        </ul>
       </Typography>
-      <div>
-        <Link color="primary" href="#" onClick={preventDefault}>
-          View balance
-        </Link>
-      </div>
     </React.Fragment>
   );
 }

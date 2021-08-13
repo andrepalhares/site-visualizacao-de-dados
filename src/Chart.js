@@ -2,32 +2,47 @@ import React from 'react';
 import { useTheme } from '@material-ui/core/styles';
 import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
 import Title from './Title';
-
-// Generate Sales Data
-function createData(time, amount) {
-  return { time, amount };
-}
-
-const data = [
-  createData('00:00', 0),
-  createData('03:00', 300),
-  createData('06:00', 600),
-  createData('09:00', 800),
-  createData('12:00', 1500),
-  createData('15:00', 2000),
-  createData('18:00', 2400),
-  createData('21:00', 2400),
-  createData('24:00', undefined),
-];
+import Plot from "react-plotly.js";
+import { valores } from "./data.js";
+import { IconButton, Tooltip } from '@material-ui/core';
+import HelpIcon from '@material-ui/icons/Help';
 
 export default function Chart() {
   const theme = useTheme();
 
+  const data = [
+    {
+      name: "Brasil",
+      x: valores.filter((v) => v.country === "Brazil").map((a) => a.year),
+      y: valores.filter((v) => v.country === "Brazil").map((a) => a.gdppc),
+      type: "scatter"
+    }
+  ];
+
   return (
     <React.Fragment>
-      <Title>Today</Title>
-      <ResponsiveContainer>
-        <LineChart
+      <Title style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        Completed years of education in the adult (15+) population
+        <Tooltip title="Clique e arraste sobre um período no gráfico para dar zoom e clique duas vezes para retornar a visualização inicial" placement="bottom">
+          <IconButton>
+            <HelpIcon />
+          </IconButton>
+        </Tooltip>
+      </Title>
+      {/* <ResponsiveContainer> */}
+        <Plot
+          data={data}
+          style={{width: '100%', height: '100%'}}
+          // layout={{
+          //   responsive: true,
+          //   useResizeHandler: true,
+          //   autosize: true,
+          //   width: '100%',
+          //   height: '100%'
+          //   // title: "Completed years of education in the adult (15+) population"
+          // }}
+        />
+        {/* <LineChart
           data={data}
           margin={{
             top: 16,
@@ -47,8 +62,8 @@ export default function Chart() {
             </Label>
           </YAxis>
           <Line type="monotone" dataKey="amount" stroke={theme.palette.primary.main} dot={false} />
-        </LineChart>
-      </ResponsiveContainer>
+        </LineChart> */}
+      {/* </ResponsiveContainer> */}
     </React.Fragment>
   );
 }
