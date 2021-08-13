@@ -22,8 +22,8 @@ export default function Chart() {
   return (
     <React.Fragment>
       <Title style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        Completed years of education in the adult (15+) population
-        <Tooltip title="Clique e arraste sobre um período no gráfico para dar zoom e clique duas vezes para retornar a visualização inicial" placement="bottom">
+        PIB per capita do Brasil
+        <Tooltip title="Clique e arraste sobre um período no gráfico para dar zoom e clique na casinha para retornar à visualização inicial" placement="bottom">
           <IconButton>
             <HelpIcon />
           </IconButton>
