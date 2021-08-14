@@ -2,7 +2,7 @@ import React from 'react';
 import { useTheme } from '@material-ui/core/styles';
 import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
 import Title from './Title';
-import Plot from "react-plotly.js";
+// import Plot from "react-plotly.js";
 // import { valores } from "./data.js";
 import { IconButton, Tooltip } from '@material-ui/core';
 import HelpIcon from '@material-ui/icons/Help';
@@ -10,14 +10,14 @@ import HelpIcon from '@material-ui/icons/Help';
 export default function Chart() {
   const theme = useTheme();
 
-  const data = [
-    {
-      name: "Brasil",
-      x: valores.filter((v) => v.country === "Brazil").map((a) => a.year),
-      y: valores.filter((v) => v.country === "Brazil").map((a) => a.gdppc),
-      type: "scatter"
-    }
-  ];
+  // const data = [
+  //   {
+  //     name: "Brasil",
+  //     x: valores.filter((v) => v.country === "Brazil").map((a) => a.year),
+  //     y: valores.filter((v) => v.country === "Brazil").map((a) => a.gdppc),
+  //     type: "scatter"
+  //   }
+  // ];
 
   return (
     <React.Fragment>

@@ -2,7 +2,7 @@ import React from 'react';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Title from './Title';
-import Plot from "react-plotly.js";
+// import Plot from "react-plotly.js";
 // import { valores } from "./data.js";
 import { IconButton, Tooltip } from '@material-ui/core';
 import HelpIcon from '@material-ui/icons/Help';
