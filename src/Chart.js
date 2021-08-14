@@ -3,12 +3,15 @@ import { useTheme } from '@material-ui/core/styles';
 import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
 import Title from './Title';
 // import Plot from "react-plotly.js";
+import Plotly from "plotly.js-basic-dist";
 // import { valores } from "./data.js";
 import { IconButton, Tooltip } from '@material-ui/core';
 import HelpIcon from '@material-ui/icons/Help';
+import createPlotlyComponent from "react-plotly.js/factory";
 
 export default function Chart() {
   const theme = useTheme();
+  const Plot = createPlotlyComponent(Plotly);
 
   // const data = [
   //   {
