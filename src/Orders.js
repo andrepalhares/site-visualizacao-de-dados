@@ -6,11 +6,7 @@ import Title from './Title';
 // import { valores } from "./data.js";
 import { IconButton, Tooltip } from '@material-ui/core';
 import HelpIcon from '@material-ui/icons/Help';
-
-// Generate Order Data
-function createData(id, date, name, shipTo, paymentMethod, amount) {
-  return { id, date, name, shipTo, paymentMethod, amount };
-}
+import createPlotlyComponent from 'react-plotly.js/factory';
 
 const useStyles = makeStyles((theme) => ({
   seeMore: {
@@ -20,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Orders() {
   const classes = useStyles();
+  const Plotly = window.Plotly;
+  const Plot = createPlotlyComponent(Plotly);
+
   return (
     <React.Fragment>
       <Title>
@@ -30,7 +29,7 @@ export default function Orders() {
           </IconButton>
         </Tooltip>
       </Title>
-      {/* <Plot
+      <Plot
         data={[
           {
             type: "choropleth",
@@ -49,7 +48,7 @@ export default function Orders() {
             }
           }
         }}
-      /> */}
+      />
     </React.Fragment>
   );
 }
