@@ -4,7 +4,7 @@ import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recha
 import Title from './Title';
 // import Plot from "react-plotly.js";
 // import Plotly from "plotly.js-basic-dist";
-// import { valores } from "./data.js";
+import { valores } from "./data.js";
 import { IconButton, Tooltip } from '@material-ui/core';
 import HelpIcon from '@material-ui/icons/Help';
 import createPlotlyComponent from 'react-plotly.js/factory';
@@ -14,14 +14,14 @@ export default function Chart() {
   const Plotly = window.Plotly;
   const Plot = createPlotlyComponent(Plotly);
 
-  // const data = [
-  //   {
-  //     name: "Brasil",
-  //     x: valores.filter((v) => v.country === "Brazil").map((a) => a.year),
-  //     y: valores.filter((v) => v.country === "Brazil").map((a) => a.gdppc),
-  //     type: "scatter"
-  //   }
-  // ];
+  const data = [
+    {
+      name: "Brasil",
+      x: valores.filter((v) => v.country === "Brazil").map((a) => a.year),
+      y: valores.filter((v) => v.country === "Brazil").map((a) => a.gdppc),
+      type: "scatter"
+    }
+  ];
 
   return (
     <React.Fragment>
@@ -34,7 +34,7 @@ export default function Chart() {
         </Tooltip>
       </Title>
       {/* <ResponsiveContainer> */}
-        {/* <Plot
+        <Plot
           data={data}
           style={{width: '100%', height: '100%'}}
           // layout={{
@@ -45,7 +45,7 @@ export default function Chart() {
           //   height: '100%'
           //   // title: "Completed years of education in the adult (15+) population"
           // }}
-        /> */}
+        />
         {/* <LineChart
           data={data}
           margin={{
