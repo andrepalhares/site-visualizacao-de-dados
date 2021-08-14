@@ -1,0 +1,440 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20210813.205104.24052.0.001.json",
+    "dumpEventTime": "2021-08-13T20:51:04Z",
+    "dumpEventTimeStamp": "1628898664419",
+    "processId": 24052,
+    "cwd": "C:\\Users\\Samsung\\Documents\\visualizacao-site",
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "--max_old_space_size=1024",
+      "C:\\Users\\Samsung\\Documents\\visualizacao-site\\node_modules\\react-scripts\\scripts\\build.js"
+    ],
+    "nodejsVersion": "v12.13.1",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.13.1",
+      "v8": "7.7.299.13-node.16",
+      "uv": "1.33.1",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.39.2",
+      "napi": "5",
+      "llhttp": "1.1.4",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.13.1/node-v12.13.1-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.13.1/node-v12.13.1.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.13.1/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.19042",
+    "osVersion": "Windows 10 Home Single Language",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz",
+        "speed": 2904,
+        "user": 11397765,
+        "nice": 0,
+        "sys": 11586781,
+        "idle": 62182406,
+        "irq": 646296
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz",
+        "speed": 2904,
+        "user": 13074062,
+        "nice": 0,
+        "sys": 7798937,
+        "idle": 64293765,
+        "irq": 133171
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz",
+        "speed": 2904,
+        "user": 14620921,
+        "nice": 0,
+        "sys": 8567546,
+        "idle": 61978296,
+        "irq": 116515
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz",
+        "speed": 2904,
+        "user": 14854421,
+        "nice": 0,
+        "sys": 7820406,
+        "idle": 62491937,
+        "irq": 99859
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "98:83:89:d6:b4:91",
+        "address": "fe80::fd87:72a1:907c:e846",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 15
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "98:83:89:d6:b4:91",
+        "address": "192.168.100.120",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      }
+    ],
+    "host": "LAPTOP-IR6T12S9"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff762ad1729",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+10873"
+    },
+    {
+      "pc": "0x00007ff762ad5b4c",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+28316"
+    },
+    {
+      "pc": "0x00007ff762ad4b08",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+24152"
+    },
+    {
+      "pc": "0x00007ff762bc369b",
+      "symbol": "v8::base::CPU::has_sse+37723"
+    },
+    {
+      "pc": "0x00007ff7633c82de",
+      "symbol": "v8::Isolate::ReportExternalAllocationLimitReached+94"
+    },
+    {
+      "pc": "0x00007ff7633b0321",
+      "symbol": "v8::SharedArrayBuffer::Externalize+833"
+    },
+    {
+      "pc": "0x00007ff76327dbec",
+      "symbol": "v8::internal::Heap::EphemeronKeyWriteBarrierFromCode+1436"
+    },
+    {
+      "pc": "0x00007ff763288f90",
+      "symbol": "v8::internal::Heap::ProtectUnprotectedMemoryChunks+1312"
+    },
+    {
+      "pc": "0x00007ff763285ac4",
+      "symbol": "v8::internal::Heap::PageFlagsAreConsistent+3204"
+    },
+    {
+      "pc": "0x00007ff76327b353",
+      "symbol": "v8::internal::Heap::CollectGarbage+1283"
+    },
+    {
+      "pc": "0x00007ff763279b24",
+      "symbol": "v8::internal::Heap::AddRetainedMap+2356"
+    },
+    {
+      "pc": "0x00007ff76329adf5",
+      "symbol": "v8::internal::Factory::NewFillerObject+53"
+    },
+    {
+      "pc": "0x00007ff763006e19",
+      "symbol": "v8::internal::interpreter::JumpTableTargetOffsets::iterator::operator=+4057"
+    },
+    {
+      "pc": "0x00007ff7637f404d",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+567949"
+    },
+    {
+      "pc": "0x000000932142e987",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 1122443264,
+    "totalCommittedMemory": 1122443264,
+    "usedMemory": 1086313208,
+    "availableMemory": 33972560,
+    "memoryLimit": 1124073472,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 261872,
+        "used": 32296,
+        "available": 229576
+      },
+      "new_space": {
+        "memorySize": 33554432,
+        "committedMemory": 33554432,
+        "capacity": 16759808,
+        "used": 5849048,
+        "available": 10910760
+      },
+      "old_space": {
+        "memorySize": 951169024,
+        "committedMemory": 951169024,
+        "capacity": 949850296,
+        "used": 945408088,
+        "available": 4442208
+      },
+      "code_space": {
+        "memorySize": 1474560,
+        "committedMemory": 1474560,
+        "capacity": 1215552,
+        "used": 1215552,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 5509120,
+        "committedMemory": 5509120,
+        "capacity": 3537680,
+        "used": 3537680,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 129851392,
+        "committedMemory": 129851392,
+        "capacity": 129720144,
+        "used": 129720144,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 622592,
+        "committedMemory": 622592,
+        "capacity": 550400,
+        "used": 550400,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 16759808,
+        "used": 0,
+        "available": 16759808
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 53.046,
+    "kernelCpuSeconds": 8.14,
+    "cpuConsumptionPercent": 152.965,
+    "maxRss": 1236406272,
+    "pageFaults": {
+      "IORequired": 600624,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 8257,
+      "writes": 19
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "APPDATA": "C:\\Users\\Samsung\\AppData\\Roaming",
+    "BABEL_ENV": "production",
+    "ChocolateyInstall": "C:\\ProgramData\\chocolatey",
+    "ChocolateyLastPathUpdate": "132196345772247542",
+    "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\crashpad_16388_JFKWDZHHRFBYICMX",
+    "COLORTERM": "truecolor",
+    "CommonProgramFiles": "C:\\Program Files\\Common Files",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "LAPTOP-IR6T12S9",
+    "ComSpec": "C:\\WINDOWS\\system32\\cmd.exe",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "FPS_BROWSER_APP_PROFILE_STRING": "Internet Explorer",
+    "FPS_BROWSER_USER_PROFILE_STRING": "Default",
+    "GDAL_DATA": "C:\\Program Files\\PostgreSQL\\13\\gdal-data",
+    "GIT_ASKPASS": "c:\\Users\\Samsung\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass.sh",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\Samsung",
+    "INIT_CWD": "C:\\Users\\Samsung\\Documents\\visualizacao-site",
+    "INTEL_DEV_REDIST": "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\",
+    "LANG": "pt_BR.UTF-8",
+    "LOCALAPPDATA": "C:\\Users\\Samsung\\AppData\\Local",
+    "LOGONSERVER": "\\\\LAPTOP-IR6T12S9",
+    "MIC_LD_LIBRARY_PATH": "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\compiler\\lib\\mic",
+    "NODE": "C:\\Program Files\\nodejs\\node.exe",
+    "NODE_ENV": "production",
+    "NODE_PATH": "",
+    "npm_config_argv": "{\"remain\":[],\"cooked\":[\"run\",\"build\"],\"original\":[\"run\",\"build\"]}",
+    "npm_config_bin_links": "true",
+    "npm_config_ignore_optional": "",
+    "npm_config_ignore_path": "1",
+    "npm_config_ignore_scripts": "",
+    "npm_config_init_license": "MIT",
+    "npm_config_init_version": "1.0.0",
+    "npm_config_network_timeout": "1000000",
+    "npm_config_registry": "https://registry.yarnpkg.com",
+    "npm_config_save_prefix": "^",
+    "npm_config_strict_ssl": "true",
+    "npm_config_user_agent": "yarn/1.22.11 npm/? node/v12.13.1 win32 x64",
+    "npm_config_version_commit_hooks": "true",
+    "npm_config_version_git_message": "v%s",
+    "npm_config_version_git_sign": "",
+    "npm_config_version_git_tag": "true",
+    "npm_config_version_tag_prefix": "v",
+    "npm_config_yarn_path": "C:\\Users\\Samsung\\Documents\\visualizacao-site\\.yarn\\releases\\yarn-1.22.11.cjs",
+    "npm_execpath": "C:\\Users\\Samsung\\Documents\\visualizacao-site\\.yarn\\releases\\yarn-1.22.11.cjs",
+    "npm_lifecycle_event": "build",
+    "npm_lifecycle_script": "react-scripts --max_old_space_size=1024 build",
+    "npm_node_execpath": "C:\\Program Files\\nodejs\\node.exe",
+    "npm_package_browserslist_development_0": "last 1 chrome version",
+    "npm_package_browserslist_development_1": "last 1 firefox version",
+    "npm_package_browserslist_development_2": "last 1 safari version",
+    "npm_package_browserslist_production_0": ">0.2%",
+    "npm_package_browserslist_production_1": "not dead",
+    "npm_package_browserslist_production_2": "not op_mini all",
+    "npm_package_dependencies_clsx": "^1.1.1",
+    "npm_package_dependencies_lodash": "^4.17.21",
+    "npm_package_dependencies_plotly_js": "^2.3.1",
+    "npm_package_dependencies_react": "^17.0.2",
+    "npm_package_dependencies_react_dom": "^17.0.2",
+    "npm_package_dependencies_react_plotly_js": "^2.5.1",
+    "npm_package_dependencies_react_scripts": "^4.0.3",
+    "npm_package_dependencies_recharts": "^2.1.0",
+    "npm_package_dependencies_web_vitals": "^1.1.2",
+    "npm_package_dependencies__material_ui_core": "^4.12.3",
+    "npm_package_dependencies__material_ui_icons": "^4.11.2",
+    "npm_package_dependencies__testing_library_jest_dom": "^5.14.1",
+    "npm_package_dependencies__testing_library_react": "^11.2.7",
+    "npm_package_dependencies__testing_library_user_event": "^12.8.3",
+    "npm_package_description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+    "npm_package_eslintConfig_extends_0": "react-app",
+    "npm_package_eslintConfig_extends_1": "react-app/jest",
+    "npm_package_name": "visualizacao-site",
+    "npm_package_private": "true",
+    "npm_package_readmeFilename": "README.md",
+    "npm_package_scripts_build": "react-scripts --max_old_space_size=1024 build",
+    "npm_package_scripts_eject": "react-scripts eject",
+    "npm_package_scripts_postinstall": "react-scripts build",
+    "npm_package_scripts_start": "react-scripts --max_old_space_size=1024 start",
+    "npm_package_scripts_test": "react-scripts test",
+    "npm_package_version": "0.1.0",
+    "NUMBER_OF_PROCESSORS": "4",
+    "OneDrive": "C:\\Users\\Samsung\\OneDrive",
+    "ORIGINAL_XDG_CURRENT_DESKTOP": "undefined",
+    "OS": "Windows_NT",
+    "Path": "C:\\Users\\Samsung\\AppData\\Local\\Temp\\yarn--1628898624129-0.9146616512445558;C:\\Users\\Samsung\\Documents\\visualizacao-site\\node_modules\\.bin;C:\\Users\\Samsung\\AppData\\Local\\Yarn\\Data\\link\\node_modules\\.bin;C:\\Users\\Samsung\\AppData\\Local\\Yarn\\bin;C:\\Program Files\\libexec\\lib\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\lib\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Pandoc\\;C:\\Users\\Samsung\\Downloads\\geckodriver-v0.29.0-win64\\geckodriver.exe;C:\\Program Files\\Git\\cmd;C:\\Users\\Samsung\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\;C:\\Users\\Samsung\\AppData\\Local\\Programs\\Python\\Python39\\;C:\\Users\\Samsung\\AppData\\Roaming\\local\\bin;C:\\Users\\Samsung\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Samsung\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Samsung\\AppData\\Roaming\\npm;C:\\Users\\Samsung\\Downloads\\geckodriver-v0.29.0-win64;C:\\Program Files\\heroku\\bin",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JSE;.WSF;.WSH;.MSC;.CPL",
+    "POSTGIS_ENABLE_OUTDB_RASTERS": "1",
+    "POSTGIS_GDAL_ENABLED_DRIVERS": "GTiff PNG JPEG GIF XYZ DTED USGSDEM AAIGrid",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 142 Stepping 9, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "8e09",
+    "ProgramData": "C:\\ProgramData",
+    "ProgramFiles": "C:\\Program Files",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "PROJ_LIB": "C:\\Program Files\\PostgreSQL\\13\\share\\contrib\\postgis-3.1\\proj",
+    "PROMPT": "$P$G",
+    "PSModulePath": "C:\\Users\\Samsung\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "PUBLIC": "C:\\Users\\Public",
+    "SESSIONNAME": "Console",
+    "STACK_ROOT": "C:\\sr",
+    "SystemDrive": "C:",
+    "SystemRoot": "C:\\WINDOWS",
+    "TEMP": "C:\\Users\\Samsung\\AppData\\Local\\Temp",
+    "TERM_PROGRAM": "vscode",
+    "TERM_PROGRAM_VERSION": "1.59.0",
+    "TMP": "C:\\Users\\Samsung\\AppData\\Local\\Temp",
+    "USERDOMAIN": "LAPTOP-IR6T12S9",
+    "USERDOMAIN_ROAMINGPROFILE": "LAPTOP-IR6T12S9",
+    "USERNAME": "Samsung",
+    "USERPROFILE": "C:\\Users\\Samsung",
+    "VSCODE_GIT_ASKPASS_MAIN": "c:\\Users\\Samsung\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass-main.js",
+    "VSCODE_GIT_ASKPASS_NODE": "C:\\Users\\Samsung\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+    "VSCODE_GIT_IPC_HANDLE": "\\\\.\\pipe\\vscode-git-84b339f2ce-sock",
+    "windir": "C:\\WINDOWS",
+    "YARN_IGNORE_PATH": "1",
+    "YARN_WRAP_OUTPUT": "false"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+    "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+    "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+    "C:\\WINDOWS\\System32\\WS2_32.dll",
+    "C:\\WINDOWS\\System32\\RPCRT4.dll",
+    "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+    "C:\\WINDOWS\\System32\\msvcrt.dll",
+    "C:\\WINDOWS\\System32\\sechost.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dbghelp.dll",
+    "C:\\WINDOWS\\System32\\USER32.dll",
+    "C:\\WINDOWS\\System32\\win32u.dll",
+    "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "C:\\WINDOWS\\System32\\GDI32.dll",
+    "C:\\WINDOWS\\System32\\gdi32full.dll",
+    "C:\\WINDOWS\\System32\\msvcp_win.dll",
+    "C:\\WINDOWS\\System32\\PSAPI.DLL",
+    "C:\\WINDOWS\\System32\\CRYPT32.dll",
+    "C:\\WINDOWS\\System32\\bcrypt.dll",
+    "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\USERENV.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMM.dll",
+    "C:\\WINDOWS\\System32\\IMM32.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\powrprof.dll",
+    "C:\\WINDOWS\\SYSTEM32\\UMPDC.dll",
+    "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\WINDOWS\\system32\\uxtheme.dll",
+    "C:\\WINDOWS\\System32\\combase.dll",
+    "C:\\WINDOWS\\system32\\mswsock.dll",
+    "C:\\WINDOWS\\SYSTEM32\\kernel.appcore.dll",
+    "C:\\WINDOWS\\System32\\bcryptprimitives.dll",
+    "C:\\WINDOWS\\SYSTEM32\\ntmarta.dll",
+    "C:\\WINDOWS\\System32\\NSI.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll",
+    "C:\\WINDOWS\\system32\\napinsp.dll",
+    "C:\\WINDOWS\\system32\\pnrpnsp.dll",
+    "C:\\WINDOWS\\system32\\wshbth.dll",
+    "C:\\WINDOWS\\system32\\NLAapi.dll",
+    "C:\\WINDOWS\\System32\\winrnr.dll"
+  ]
+}
