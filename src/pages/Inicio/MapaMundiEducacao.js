@@ -1,21 +1,11 @@
 import React from 'react';
-import Link from '@material-ui/core/Link';
-import { makeStyles } from '@material-ui/core/styles';
-import Title from './Title';
-// import Plot from "react-plotly.js";
-import { valores } from "./data.js";
+import Title from '../../Title';
+import { valores } from "../../data.js";
 import { IconButton, Tooltip } from '@material-ui/core';
 import HelpIcon from '@material-ui/icons/Help';
 import createPlotlyComponent from 'react-plotly.js/factory';
 
-const useStyles = makeStyles((theme) => ({
-  seeMore: {
-    marginTop: theme.spacing(3),
-  },
-}));
-
-export default function Orders() {
-  const classes = useStyles();
+export default function MapaMundiEducacao() {
   const Plotly = window.Plotly;
   const Plot = createPlotlyComponent(Plotly);
 

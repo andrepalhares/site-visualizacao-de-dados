@@ -86,7 +86,6 @@ const useStyles = makeStyles((theme) => ({
     link: {
         textDecoration: 'none', 
         color: 'inherit',
-        textDecoration: 'inherit',
 
         '&:focus, &:hover, &:visited, &:link, &:active': { 
             textDecoration: 'none' 

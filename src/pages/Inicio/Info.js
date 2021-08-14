@@ -1,26 +1,21 @@
 import React from 'react';
-import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Title from './Title';
-
-function preventDefault(event) {
-  event.preventDefault();
-}
+import Title from '../../Title';
 
 const useStyles = makeStyles({
-  depositContext: {
+  tituloInfo: {
     fontSize: '12px',
     flex: 1,
   },
 });
 
-export default function Deposits() {
+export default function Info() {
   const classes = useStyles();
   return (
     <React.Fragment>
       <Title>Os dados</Title>
-      <Typography color="textSecondary" className={classes.depositContext}>
+      <Typography color="textSecondary" className={classes.tituloInfo}>
         Os dados utilizados neste trabalho estão presentes no dataset Country Socioeconomic Status Scores: 1880-2010, compilado por Shawn Dorius e disponibilizado no site <a href="https://www.kaggle.com/sdorius/globses">Kaggle</a>. Nessa base de dados iniciais, diversos atributos foram encontrados e separados por países. São eles:
         <ul>
           <li>Ano em que a coleta de dados foi realizada</li>
