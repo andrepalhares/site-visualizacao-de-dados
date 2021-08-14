@@ -22,7 +22,7 @@ export default function PIBPerCapitaBrasil() {
   return (
     <React.Fragment>
       <Title style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        PIB per capita do Brasil;
+        PIB per capita do Brasil
         <Tooltip title="Clique e arraste sobre um período no gráfico para dar zoom e clique na casinha para retornar à visualização inicial" placement="bottom">
           <IconButton>
             <HelpIcon />
