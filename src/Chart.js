@@ -3,7 +3,7 @@ import { useTheme } from '@material-ui/core/styles';
 import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
 import Title from './Title';
 import Plot from "react-plotly.js";
-import { valores } from "./data.js";
+// import { valores } from "./data.js";
 import { IconButton, Tooltip } from '@material-ui/core';
 import HelpIcon from '@material-ui/icons/Help';
 
@@ -30,7 +30,7 @@ export default function Chart() {
         </Tooltip>
       </Title>
       {/* <ResponsiveContainer> */}
-        <Plot
+        {/* <Plot
           data={data}
           style={{width: '100%', height: '100%'}}
           // layout={{
@@ -41,7 +41,7 @@ export default function Chart() {
           //   height: '100%'
           //   // title: "Completed years of education in the adult (15+) population"
           // }}
-        />
+        /> */}
         {/* <LineChart
           data={data}
           margin={{
