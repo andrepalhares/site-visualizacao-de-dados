@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FormControl, FormHelperText, Grid, IconButton, InputLabel, makeStyles, MenuItem, Paper, Select, Tooltip } from "@material-ui/core";
 import createPlotlyComponent from 'react-plotly.js/factory';
-import { valores, valoresMediosMudiais, anos, paises } from '../../data';
+import { valores, valoresMediosMudiais, anos, paisesFormacaoAcademica } from '../../data';
 import Title from "../../Title";
 import HelpIcon from '@material-ui/icons/Help';
 
@@ -36,7 +36,7 @@ export default function FormacaoAcademica() {
     const gerarDadosPaisSelecionado = () => {
         return [mundo, {
             x: anos,
-            y: anos.map(ano => valores.find(valor => valor.year === ano && valor.country === pais)?.yrseduc ?? 0),
+            y: anos.map(ano => valores.find(valor => valor.year === ano && valor.country === pais)?.yrseduc ?? null),
             name: pais,
             marker: {color: 'rgb(26, 118, 255)'},
             type: 'bar'
@@ -88,11 +88,11 @@ export default function FormacaoAcademica() {
                         <Select
                             labelId="demo-simple-select-helper-label"
                             id="demo-simple-select-helper"
-                            value={paises}
+                            value={paisesFormacaoAcademica}
                             onChange={(event) => setPais(event.target.value)}
                             defaultValue = ""
                         >
-                            {paises.map(pais => (
+                            {paisesFormacaoAcademica.map(pais => (
                                 <MenuItem value={pais}>{pais}</MenuItem>
                             ))}
                         </Select>
