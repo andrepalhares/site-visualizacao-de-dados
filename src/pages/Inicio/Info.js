@@ -16,7 +16,7 @@ export default function Info() {
     <React.Fragment>
       <Title>Os dados</Title>
       <Typography color="textSecondary" className={classes.tituloInfo}>
-        Os dados utilizados neste trabalho estão presentes no dataset Country Socioeconomic Status Scores: 1880-2010, compilado por Shawn Dorius e disponibilizado no site <a href="https://www.kaggle.com/sdorius/globses">Kaggle</a>. Nessa base de dados iniciais, diversos atributos foram encontrados e separados por países. São eles:
+        Os dados utilizados neste trabalho estão presentes no dataset Country Socioeconomic Status Scores: 1880-2010, compilado por Shawn Dorius e disponibilizado no site <a target="_blank" rel="noreferrer" href="https://www.kaggle.com/sdorius/globses">Kaggle</a>. Nessa base de dados iniciais, diversos atributos foram encontrados e separados por países. São eles:
         <ul>
           <li>Ano em que a coleta de dados foi realizada</li>
           <li>SES: Valor do status socioeconômico dos países (um valor numérico que varia de 1 a 99)</li>

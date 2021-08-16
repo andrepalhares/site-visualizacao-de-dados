@@ -183,9 +183,7 @@ const Layout = ({children}) => {
                     {children}
                     <Box pt={4}>
                         <Typography variant="body2" color="textSecondary" align="center">
-                            {'Copyright © '}
-                            {new Date().getFullYear()}
-                            {'.'}
+                            {'Visualização de Dados © 2021/1'}
                         </Typography>
                     </Box>
                 </Container>

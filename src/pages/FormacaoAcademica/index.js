@@ -23,12 +23,16 @@ export default function FormacaoAcademica() {
     const Plotly = window.Plotly;
     const Plot = createPlotlyComponent(Plotly);
 
+    const handleChange = (event) => {
+        setPais(event.target.value);
+    };
+
     const mundo = {
         x: anos,
         y: valoresMediosMudiais.map(val => val.yrseduc),
         name: 'Média mundial',
         marker: {
-            color: '#04eaa6'
+            color: '#E1BE6A'
         },
         type: 'bar'
     };
@@ -38,16 +42,23 @@ export default function FormacaoAcademica() {
             x: anos,
             y: anos.map(ano => valores.find(valor => valor.year === ano && valor.country === pais)?.yrseduc ?? null),
             name: pais,
-            marker: {color: 'rgb(26, 118, 255)'},
+            marker: {color: '#40B0A6'},
             type: 'bar'
         }];
     }
       
     var layout = {
-        xaxis: {tickfont: {
-            size: 14,
+        xaxis: {
+            tickfont: {
+                size: 14,
+                color: 'rgb(107, 107, 107)'
+          },
+          title: 'Ano',
+          titlefont: {
+            size: 16,
             color: 'rgb(107, 107, 107)'
-          }},
+          },
+        },
         yaxis: {
           title: 'SES (Status socio-econômico)',
           titlefont: {
@@ -89,7 +100,7 @@ export default function FormacaoAcademica() {
                             labelId="demo-simple-select-helper-label"
                             id="demo-simple-select-helper"
                             value={paisesFormacaoAcademica}
-                            onChange={(event) => setPais(event.target.value)}
+                            onChange={handleChange}
                             defaultValue = ""
                         >
                             {paisesFormacaoAcademica.map(pais => (

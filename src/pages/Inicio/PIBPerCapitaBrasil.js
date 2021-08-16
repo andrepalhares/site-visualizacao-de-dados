@@ -15,7 +15,8 @@ export default function PIBPerCapitaBrasil() {
       name: "Brasil",
       x: valores.filter((v) => v.country === "Brazil").map((a) => a.year),
       y: valores.filter((v) => v.country === "Brazil").map((a) => a.gdppc),
-      type: "scatter"
+      type: "scatter",
+      marker: { color: '#009E73' },
     }
   ];
 
