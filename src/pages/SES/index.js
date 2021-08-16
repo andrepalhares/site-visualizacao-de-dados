@@ -151,8 +151,7 @@ export default function SES() {
                 <Grid item xs={12} style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                     <Plot 
                         data={data} 
-                        layout={layout} 
-                        style={{ width: '100%', height: '200%' }} />
+                        layout={layout} />
                 </Grid>
                 </Paper>
             </Grid>
