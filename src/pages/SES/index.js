@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Grid, IconButton, makeStyles, Paper, Tooltip } from "@material-ui/core";
 import createPlotlyComponent from 'react-plotly.js/factory';
 import { valores } from '../../data';
 import Title from "../../Title";
 import HelpIcon from '@material-ui/icons/Help';
-import _ from "lodash";
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -117,6 +116,21 @@ export default function SES() {
             title: 'Anos de formação acadêmica',
             range: [0, 13.5]
         },
+        annotations: [
+            {
+              xref: 'paper',
+              yref: 'paper',
+              x: 0,
+              y: -0.125,
+              text: 'Informações sobre o continente de cada país retirada do site <a target="_blank" rel="noreferrer" href="https://datahub.io/JohnSnowLabs/country-and-continent-codes-list#data">John Snow Labs GeoNames</a> (Acesso em 15 agosto 2021)',
+              showarrow: false,
+              font:{
+                family: 'Arial',
+                size: 10,
+                color: 'rgb(150,150,150)'
+              }
+            }
+        ]        
     };
       
 
