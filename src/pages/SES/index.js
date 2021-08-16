@@ -152,7 +152,7 @@ export default function SES() {
                     <Plot 
                         data={data} 
                         layout={layout} 
-                        style={{ width: 'calc(100% - 2px)', height: '200%' }} />
+                        style={{ width: '100%', height: '200%' }} />
                 </Grid>
                 </Paper>
             </Grid>
