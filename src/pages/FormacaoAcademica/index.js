@@ -99,12 +99,11 @@ export default function FormacaoAcademica() {
                         <Select
                             labelId="demo-simple-select-helper-label"
                             id="demo-simple-select-helper"
-                            value={paisesFormacaoAcademica}
                             onChange={handleChange}
-                            defaultValue = ""
+                            defaultValue = "Brazil"
                         >
-                            {paisesFormacaoAcademica.map(pais => (
-                                <MenuItem value={pais}>{pais}</MenuItem>
+                            {paisesFormacaoAcademica.map((pais, index) => (
+                                <MenuItem key={index} value={pais}>{pais}</MenuItem>
                             ))}
                         </Select>
                         <FormHelperText>Nem todos os países possuem dados a serem exibidos</FormHelperText>

@@ -59,8 +59,8 @@ export default function PopulacaoMundial() {
             <Paper className={classes.paper}>
                 <Grid item xs={12}>
                     <Title>
-                        Porcentagem da população mundial ao longo dos anos {ano}
-                        <Tooltip title="Use o scroll para dar zoom-in e zoom-out no mapa" placement="bottom">
+                        Porcentagem da população mundial, por país, ao longo dos anos
+                        <Tooltip title="Selecione um ano no campo abaixo para visualizar o mapa para o ano escolhido; Use o scroll para dar zoom-in e zoom-out no mapa" placement="bottom">
                             <IconButton>
                                 <HelpIcon />
                             </IconButton>

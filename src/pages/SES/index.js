@@ -140,7 +140,7 @@ export default function SES() {
             <Paper className={classes.paper}>
                 <Grid item xs={12}>
                     <Title>
-                        Porcentagem da população mundial por país (2010)
+                        SES (Status socio-econômico)
                         <Tooltip title="Clique em um ou mais itens na legenda para esconder continentes do gráfico e passe o mouse sobre os pontos para ver detalhes" placement="bottom">
                             <IconButton>
                                 <HelpIcon />
