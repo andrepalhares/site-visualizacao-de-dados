@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
       ...theme.mixins.toolbar,
     },
     appBar: {
+      backgroundColor: '#1A5653',
       zIndex: theme.zIndex.drawer + 1,
       transition: theme.transitions.create(['width', 'margin'], {
         easing: theme.transitions.easing.sharp,
@@ -54,6 +55,7 @@ const useStyles = makeStyles((theme) => ({
       flexGrow: 1,
     },
     drawerPaper: {
+      color: '#08313A',
       position: 'relative',
       whiteSpace: 'nowrap',
       width: drawerWidth,
@@ -91,6 +93,9 @@ const useStyles = makeStyles((theme) => ({
             textDecoration: 'none' 
         } 
     },
+    icone: {
+        color: '#00735C'
+    }
   }));
 
 const Layout = ({children}) => {
@@ -124,7 +129,7 @@ const Layout = ({children}) => {
             <Drawer
                 variant="permanent"
                 classes={{
-                paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
+                    paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
                 }}
                 open={open}
             >
@@ -138,7 +143,7 @@ const Layout = ({children}) => {
                     <Link className={classes.link} to="/">
                         <ListItem button>
                             <ListItemIcon>
-                                <HomeIcon />
+                                <HomeIcon className={classes.icone} />
                             </ListItemIcon>
                             <ListItemText primary="Início" />
                         </ListItem>
@@ -146,7 +151,7 @@ const Layout = ({children}) => {
                     <Link className={classes.link} to="/ses">
                         <ListItem button>
                             <ListItemIcon>
-                                <AttachMoneyIcon />
+                                <AttachMoneyIcon className={classes.icone} />
                             </ListItemIcon>
                             <ListItemText primary="Socio-econômico" />
                         </ListItem>
@@ -154,7 +159,7 @@ const Layout = ({children}) => {
                     <Link className={classes.link} to="/pib-per-capita">
                         <ListItem button>
                             <ListItemIcon>
-                                <AccountBalanceIcon />
+                                <AccountBalanceIcon className={classes.icone} />
                             </ListItemIcon>
                             <ListItemText primary="PIB per capita" />
                         </ListItem>
@@ -162,7 +167,7 @@ const Layout = ({children}) => {
                     <Link className={classes.link} to="/formacao-academica">
                         <ListItem button>
                             <ListItemIcon>
-                                <SchoolIcon />
+                                <SchoolIcon className={classes.icone} />
                             </ListItemIcon>
                             <ListItemText primary="Formação acadêmica" />
                         </ListItem>
@@ -170,7 +175,7 @@ const Layout = ({children}) => {
                     <Link className={classes.link} to="/populacao">
                         <ListItem button>
                             <ListItemIcon>
-                                <PeopleAltIcon />
+                                <PeopleAltIcon className={classes.icone} />
                             </ListItemIcon>
                             <ListItemText primary="População mundial" />
                         </ListItem>
