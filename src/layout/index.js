@@ -153,7 +153,7 @@ const Layout = ({children}) => {
                             <ListItemIcon>
                                 <AttachMoneyIcon className={classes.icone} />
                             </ListItemIcon>
-                            <ListItemText primary="Socio-econômico" />
+                            <ListItemText primary="Socioeconômico" />
                         </ListItem>
                     </Link>
                     <Link className={classes.link} to="/pib-per-capita">

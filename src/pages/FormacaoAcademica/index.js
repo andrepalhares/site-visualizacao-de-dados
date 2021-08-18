@@ -60,7 +60,7 @@ export default function FormacaoAcademica() {
           },
         },
         yaxis: {
-          title: 'SES (Status socio-econômico)',
+          title: 'SES (Status socioeconômico)',
           titlefont: {
             size: 16,
             color: 'rgb(107, 107, 107)'

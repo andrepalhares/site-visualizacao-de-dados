@@ -50,7 +50,7 @@ const GraficoBarras = () => {
           },
         },
         yaxis: {
-          title: 'SES (Status socio-econômico)',
+          title: 'SES (Status socioeconômico)',
           titlefont: {
             size: 16,
             color: 'rgb(107, 107, 107)'
@@ -75,7 +75,7 @@ const GraficoBarras = () => {
         <>
             <Grid item xs={12}>
                 <Title>
-                    SES (status socio-econômico), por país, ao longo dos anos
+                    SES (status socioeconômico), por país, ao longo dos anos
                     <Tooltip title="Selecione um país no campo abaixo para visualizar o comparativo com a média mundial" placement="bottom">
                         <IconButton>
                             <HelpIcon />

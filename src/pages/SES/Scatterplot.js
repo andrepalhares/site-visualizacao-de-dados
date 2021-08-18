@@ -20,7 +20,7 @@ const Scatterplot = () => {
         name: 'Ásia',
         hovertemplate: 
             '<b>%{text}</b><br><br>' +
-            '<b>Status socio-econômico</b>: %{x}' +
+            '<b>Status socioeconômico</b>: %{x}' +
             '<br><b>Anos de formação acadêmica</b>: %{y}<br>',
         text: dados.filter(d => d.continent === 'Asia').map(dado => dado.country),
         marker: { size: 12, color: '#332288' }
@@ -33,7 +33,7 @@ const Scatterplot = () => {
         name: 'Europa',
         hovertemplate: 
             '<b>%{text}</b><br><br>' +
-            '<b>Status socio-econômico</b>: %{x}' +
+            '<b>Status socioeconômico</b>: %{x}' +
             '<br><b>Anos de formação acadêmica</b>: %{y}<br>',
         text: dados.filter(d => d.continent === 'Europe').map(dado => dado.country),
         marker: { size: 12, color: '#44AA99' }
@@ -46,7 +46,7 @@ const Scatterplot = () => {
         name: 'África',
         hovertemplate: 
             '<b>%{text}</b><br><br>' +
-            '<b>Status socio-econômico</b>: %{x}' +
+            '<b>Status socioeconômico</b>: %{x}' +
             '<br><b>Anos de formação acadêmica</b>: %{y}<br>',
         text: dados.filter(d => d.continent === 'Africa').map(dado => dado.country),
         marker: { size: 12, color: '#88CCEE' }
@@ -59,7 +59,7 @@ const Scatterplot = () => {
         name: 'Oceania',
         hovertemplate: 
             '<b>%{text}</b><br><br>' +
-            '<b>Status socio-econômico</b>: %{x}' +
+            '<b>Status socioeconômico</b>: %{x}' +
             '<br><b>Anos de formação acadêmica</b>: %{y}<br>',
         text: dados.filter(d => d.continent === 'Oceania').map(dado => dado.country),
         marker: { size: 12, color: '#DDCC77' }
@@ -72,7 +72,7 @@ const Scatterplot = () => {
         name: 'América do Norte',
         hovertemplate: 
             '<b>%{text}</b><br><br>' +
-            '<b>Status socio-econômico</b>: %{x}' +
+            '<b>Status socioeconômico</b>: %{x}' +
             '<br><b>Anos de formação acadêmica</b>: %{y}<br>',
         text: dados.filter(d => d.continent === 'North America').map(dado => dado.country),
         marker: { size: 12, color: '#CC6677' }
@@ -85,7 +85,7 @@ const Scatterplot = () => {
         name: 'América do Sul',
         hovertemplate: 
             '<b>%{text}</b><br><br>' +
-            '<b>Status socio-econômico</b>: %{x}' +
+            '<b>Status socioeconômico</b>: %{x}' +
             '<br><b>Anos de formação acadêmica</b>: %{y}<br>',
         text: dados.filter(d => d.continent === 'South America').map(dado => dado.country),
         marker: { size: 12, color: '#AA4499' }
@@ -96,7 +96,7 @@ const Scatterplot = () => {
     var layout = {
         hovermode: 'closest',
         xaxis: {
-            title: 'SES (Status socio-econômico)',
+            title: 'SES (Status socioeconômico)',
             range: [ 0, 100 ]
           },
         yaxis: {
