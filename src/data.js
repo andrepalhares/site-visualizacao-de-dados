@@ -23262,3 +23262,12 @@ export const paisesFormacaoAcademica = [
    "South Africa",
    "Zambia"
 ];
+
+export const continentes = [
+   "Africa",
+   "Asia",
+   "Europe",
+   "North America",
+   "Oceania",
+   "South America"
+];

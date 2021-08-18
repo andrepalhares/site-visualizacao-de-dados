@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, makeStyles, Paper } from "@material-ui/core";
 import Scatterplot from "././Scatterplot";
 import GraficoBarras from "././GraficoBarras";
+import Ranking from "./Ranking";
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -28,6 +29,11 @@ export default function SES() {
             <Grid item xs={12}>
                 <Paper className={classes.paper}>
                     <Scatterplot />
+                </Paper>
+            </Grid>
+            <Grid item xs={12}>
+                <Paper className={classes.paper}>
+                    <Ranking />
                 </Paper>
             </Grid>
         </Grid>
