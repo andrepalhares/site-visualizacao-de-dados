@@ -60,7 +60,7 @@ export default function FormacaoAcademica() {
           },
         },
         yaxis: {
-          title: 'SES (Status socioeconômico)',
+          title: 'Anos de formação acadêmica',
           titlefont: {
             size: 16,
             color: 'rgb(107, 107, 107)'
