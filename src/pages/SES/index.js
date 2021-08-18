@@ -82,7 +82,7 @@ export default function SES() {
         y: dados.filter(d => d.continent === 'North America').map(dado => dado.yrseduc.toFixed(1)),
         mode: 'markers',
         type: 'scatter',
-        name: 'América do Norte',
+        name: 'América do Norte/Central',
         hovertemplate: 
             '<b>%{text}</b><br><br>' +
             '<b>Status socio-econômico</b>: %{x}' +
@@ -140,7 +140,7 @@ export default function SES() {
             <Paper className={classes.paper}>
                 <Grid item xs={12}>
                     <Title>
-                        SES (Status socio-econômico)
+                        SES (Status socio-econômico) em 2010
                         <Tooltip title="Clique em um ou mais itens na legenda para esconder continentes do gráfico e passe o mouse sobre os pontos para ver detalhes" placement="bottom">
                             <IconButton>
                                 <HelpIcon />

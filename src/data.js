@@ -288,7 +288,7 @@ export const valores = [
    {
       "unid": 384,
       "wbid": "CIV",
-      "country": "C�te d'Ivoire",
+      "country": "Côte d'Ivoire",
       "year": 1880,
       "SES": 15.333624,
       "gdppc": 533.66669,
@@ -1927,7 +1927,7 @@ export const valores = [
    {
       "unid": 384,
       "wbid": "CIV",
-      "country": "C�te d'Ivoire",
+      "country": "Côte d'Ivoire",
       "year": 1890,
       "SES": 24.726908,
       "gdppc": 567.33331,
@@ -3566,7 +3566,7 @@ export const valores = [
    {
       "unid": 384,
       "wbid": "CIV",
-      "country": "C�te d'Ivoire",
+      "country": "Côte d'Ivoire",
       "year": 1900,
       "SES": 23.896578,
       "gdppc": 601,
@@ -5205,7 +5205,7 @@ export const valores = [
    {
       "unid": 384,
       "wbid": "CIV",
-      "country": "C�te d'Ivoire",
+      "country": "Côte d'Ivoire",
       "year": 1910,
       "SES": 16.067568,
       "gdppc": 628.69232,
@@ -6844,7 +6844,7 @@ export const valores = [
    {
       "unid": 384,
       "wbid": "CIV",
-      "country": "C�te d'Ivoire",
+      "country": "Côte d'Ivoire",
       "year": 1920,
       "SES": 25.034893,
       "gdppc": 682.62964,
@@ -8483,7 +8483,7 @@ export const valores = [
    {
       "unid": 384,
       "wbid": "CIV",
-      "country": "C�te d'Ivoire",
+      "country": "Côte d'Ivoire",
       "year": 1930,
       "SES": 23.95949,
       "gdppc": 747.81482,
@@ -10121,7 +10121,7 @@ export const valores = [
    {
       "unid": 384,
       "wbid": "CIV",
-      "country": "C�te d'Ivoire",
+      "country": "Côte d'Ivoire",
       "year": 1940,
       "SES": 23.963064,
       "gdppc": 813,
@@ -11760,7 +11760,7 @@ export const valores = [
    {
       "unid": 384,
       "wbid": "CIV",
-      "country": "C�te d'Ivoire",
+      "country": "Côte d'Ivoire",
       "year": 1950,
       "SES": 28.476187,
       "gdppc": 1041,
@@ -13399,7 +13399,7 @@ export const valores = [
    {
       "unid": 384,
       "wbid": "CIV",
-      "country": "C�te d'Ivoire",
+      "country": "Côte d'Ivoire",
       "year": 1960,
       "SES": 31.213163,
       "gdppc": 1256,
@@ -15038,7 +15038,7 @@ export const valores = [
    {
       "unid": 384,
       "wbid": "CIV",
-      "country": "C�te d'Ivoire",
+      "country": "Côte d'Ivoire",
       "year": 1970,
       "SES": 31.693548,
       "gdppc": 1808,
@@ -16677,7 +16677,7 @@ export const valores = [
    {
       "unid": 384,
       "wbid": "CIV",
-      "country": "C�te d'Ivoire",
+      "country": "Côte d'Ivoire",
       "year": 1980,
       "SES": 32.958385,
       "gdppc": 2041,
@@ -18316,7 +18316,7 @@ export const valores = [
    {
       "unid": 384,
       "wbid": "CIV",
-      "country": "C�te d'Ivoire",
+      "country": "Côte d'Ivoire",
       "year": 1990,
       "SES": 30.177212,
       "gdppc": 3220.4946,
@@ -19955,7 +19955,7 @@ export const valores = [
    {
       "unid": 384,
       "wbid": "CIV",
-      "country": "C�te d'Ivoire",
+      "country": "Côte d'Ivoire",
       "year": 2000,
       "SES": 20.771715,
       "gdppc": 2977.6953,
@@ -21594,7 +21594,7 @@ export const valores = [
    {
       "unid": 384,
       "wbid": "CIV",
-      "country": "C�te d'Ivoire",
+      "country": "Côte d'Ivoire",
       "year": 2010,
       "SES": 9.9097223,
       "gdppc": 2726.2886,
@@ -23199,7 +23199,6 @@ export const paisesFormacaoAcademica = [
    "Canada",
    "Switzerland",
    "Chile",
-   "Côte d'Ivoire",
    "Cameroon",
    "Costa Rica",
    "Cuba",
