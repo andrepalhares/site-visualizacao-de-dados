@@ -8701,6 +8701,16 @@ export const valores = [
       "continent": "Oceania"
    },
    {
+      "unid": 250,
+      "wbid": "FRA",
+      "country": "France",
+      "year": 1930,
+      "SES": 90.486153,
+      "gdppc": 4532,
+      "yrseduc": 7.73,
+      "popshare": ".019817963"
+   },
+   {
       "unid": 266,
       "wbid": "GAB",
       "country": "Gabon",
