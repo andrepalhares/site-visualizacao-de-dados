@@ -40,14 +40,14 @@ export default function PIBPerCapita() {
             x: anos,
             y: anos.map(
               (ano) =>
-                valores.find(
+                parseFloat(valores.find(
                   (valor) => valor.year === ano && valor.country === pais
-                )?.gdppc ?? null
+                )?.gdppc ?? null).toFixed(2)
             ),
             trendline: anos.map(
               (ano) =>
-                valoresMediosMudiais.find((valor) => valor.year === ano)?.gdppc ??
-                null
+                parseFloat(valoresMediosMudiais.find((valor) => valor.year === ano)?.gdppc ??
+                null).toFixed(2)
             ),
             name: pais,
             marker: { color: "#0C7BDC" },
@@ -56,7 +56,7 @@ export default function PIBPerCapita() {
           {
             name: "Média mundial",
             x: valores.filter((v) => v.country === "Brazil").map((a) => a.year),
-            y: valoresMediosMudiais.map((a) => a.gdppc),
+            y: valoresMediosMudiais.map((a) => parseFloat(a.gdppc).toFixed(2)),
             type: "lines",
             marker: { color: '#FFC20A' },
             line: {
@@ -80,7 +80,7 @@ export default function PIBPerCapita() {
           }
         },
         yaxis: {
-          title: "PIB per capta",
+          title: "PIB per capita",
           titlefont: {
             size: 16,
             color: "rgb(107, 107, 107)"
@@ -107,9 +107,9 @@ export default function PIBPerCapita() {
           <Paper className={classes.paper}>
             <Grid item xs={12}>
               <Title>
-                PIB per capta ao longo dos anos
+                PIB per capita ao longo dos anos
                 <Tooltip
-                  title="Selecione um país no campo abaixo para visualizar o progresso do PIB per capta ao longo dos anos"
+                  title="Selecione um país no campo abaixo para visualizar o progresso do PIB per capita ao longo dos anos"
                   placement="bottom"
                 >
                   <IconButton>
