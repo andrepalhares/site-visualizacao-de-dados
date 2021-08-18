@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid, IconButton, makeStyles, Paper, Tooltip } from "@material-ui/core";
 import createPlotlyComponent from 'react-plotly.js/factory';
-import { valores } from '../../data';
+import { valores, paises, valoresMediosMudiais, anos } from '../../data';
 import Title from "../../Title";
 import HelpIcon from '@material-ui/icons/Help';
+import { FormControl } from "@material-ui/core";
+import { InputLabel } from "@material-ui/core";
+import { Select } from "@material-ui/core";
+import { FormHelperText } from "@material-ui/core";
+import { MenuItem } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -19,88 +24,124 @@ const useStyles = makeStyles((theme) => ({
 
 export default function PIBPerCapita() {
     const classes = useStyles();
+
     const Plotly = window.Plotly;
     const Plot = createPlotlyComponent(Plotly);
-
-    const anos = [1980, 1990, 2000, 2010];
-
-    var xData = anos;
-
-    var yData = anos.map((ano) => {
-        const anuais = valores.filter(valor => valor.year === ano && valor.gdppc)
-        
-        return anuais.map(t => parseFloat(t.gdppc.toFixed(2)))
-    })
     
-    var zData = anos.map((ano) => {
-        const anuais = valores.filter(valor => valor.year === ano && valor.gdppc)
-        
-        return anuais.map(t => t.country)
-    })
-    
-    var data = [];
+    const [pais, setPais] = useState("Brazil");
 
-    for ( var i = 0; i < xData.length; i ++ ) {
-        var result = {
-            type: 'box',
-            y: yData[i],
-            z: zData[i],
-            name: xData[i],
-            hovertext: zData[i],
-            boxpoints: 'all',
-            jitter: 0.5,
-            whiskerwidth: 0.2,
-            fillcolor: 'cls',
-            marker: {
-                size: 5
-            },
+    const handleChange = (event) => {
+      setPais(event.target.value);
+    };
+
+    const gerarDadosPaisSelecionado = () => {
+        return [
+          {
+            x: anos,
+            y: anos.map(
+              (ano) =>
+                valores.find(
+                  (valor) => valor.year === ano && valor.country === pais
+                )?.gdppc ?? null
+            ),
+            trendline: anos.map(
+              (ano) =>
+                valoresMediosMudiais.find((valor) => valor.year === ano)?.gdppc ??
+                null
+            ),
+            name: pais,
+            marker: { color: "#0C7BDC" },
+            type: "scatter"
+          },
+          {
+            name: "Média mundial",
+            x: valores.filter((v) => v.country === "Brazil").map((a) => a.year),
+            y: valoresMediosMudiais.map((a) => a.gdppc),
+            type: "lines",
+            marker: { color: '#FFC20A' },
             line: {
-                width: 1
+              dash: "dot",
+              width: 4
             }
-        };
-        data.push(result);
+          }
+        ];
     };
 
     var layout = {
+        xaxis: {
+          tickfont: {
+            size: 14,
+            color: "rgb(107, 107, 107)"
+          },
+          title: "Ano",
+          titlefont: {
+            size: 16,
+            color: "rgb(107, 107, 107)"
+          }
+        },
         yaxis: {
-            autorange: true,
-            showgrid: true,
-            zeroline: true,
-            gridcolor: 'rgb(255, 255, 255)',
-            gridwidth: 1,
-            zerolinewidth: 2
+          title: "PIB per capta",
+          titlefont: {
+            size: 16,
+            color: "rgb(107, 107, 107)"
+          },
+          tickfont: {
+            size: 14,
+            color: "rgb(107, 107, 107)"
+          }
         },
-        margin: {
-            l: 40,
-            r: 30,
-            b: 80,
-            t: 100
+        legend: {
+          x: 0,
+          y: 1.0,
+          bgcolor: "rgba(255, 255, 255, 0)",
+          bordercolor: "rgba(255, 255, 255, 0)"
         },
-        paper_bgcolor: 'rgb(243, 243, 243)',
-        plot_bgcolor: 'rgb(243, 243, 243)',
-        showlegend: false
+        barmode: "group",
+        bargap: 0.15,
+        bargroupgap: 0.1
     };
 
     return (
         <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <Paper className={classes.paper}>
             <Grid item xs={12}>
-            <Paper className={classes.paper}>
-                <Grid item xs={12}>
-                    <Title>
-                        Anos de formação acadêmica completos de pessoas com mais de 15 anos
-                        <Tooltip title="Clique e arraste para aproximar em um período no gráfico" placement="bottom">
-                            <IconButton>
-                                <HelpIcon />
-                            </IconButton>
-                        </Tooltip>
-                    </Title>
-                </Grid>
-                    <Plot 
-                        data={data} 
-                        layout={layout}
-                        style={{ width: 'calc(100% - 10px)' }} />
-                </Paper>
+              <Title>
+                PIB per capta ao longo dos anos
+                <Tooltip
+                  title="Selecione um país no campo abaixo para visualizar o progresso do PIB per capta ao longo dos anos"
+                  placement="bottom"
+                >
+                  <IconButton>
+                    <HelpIcon />
+                  </IconButton>
+                </Tooltip>
+              </Title>
+              <FormControl className={classes.formControl}>
+                <InputLabel id="demo-simple-select-helper-label">
+                  País
+                </InputLabel>
+                <Select
+                  labelId="demo-simple-select-helper-label"
+                  id="demo-simple-select-helper"
+                  value={pais}
+                  onChange={handleChange}
+                >
+                  {paises.map((pais, index) => (
+                    <MenuItem key={index} value={pais}>{pais}</MenuItem>
+                  ))}
+                </Select>
+                <FormHelperText>
+                  Nem todos os países possuem dados a serem exibidos
+                </FormHelperText>
+              </FormControl>
             </Grid>
+            <Plot
+              data={gerarDadosPaisSelecionado()}
+              layout={layout}
+              style={{ width: "calc(100% - 2px)", height: "50%" }}
+            />
+          </Paper>
         </Grid>
-    )
+    </Grid>)
 }
